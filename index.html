@@ -7,6 +7,11 @@
             html, body{
                 height: 100%;
             }
+
+            section {
+                padding: 0.5rem;
+            }
+
             #branding {
                 display: grid;
                 column-gap: 0.5em;
@@ -94,9 +99,243 @@
                 margin: 0.25em;
 
             }
+
+            .homework div{
+                display: flex;
+                flex-direction: row;
+            }
+
             #script_links {
                 display: flex;
                 justify-content: space-evenly;
+            }
+
+            form-section {
+                max-width: 520px;
+                margin: 2rem auto;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                color: #333;
+            }
+
+            form-section h4 {
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+
+            /* Form layout */
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 0.9rem;
+                padding: 1.25rem;
+                border: 1px solid black;
+                border-radius: 8px;
+            }
+
+            /* Labels wrap inputs */
+            label {
+                display: flex;
+                flex-direction: column;
+                font-size: 0.9rem;
+                font-weight: 500;
+                gap: 0.35rem;
+            }
+
+            /* Inputs + selects */
+            input[type="text"],
+            select {
+                padding: 0.45rem 0.55rem;
+                font-size: 0.9rem;
+                border: 1px solid #d1d5db;
+                border-radius: 4px;
+                background: white;
+                transition: border-color 0.15s ease, box-shadow 0.15s ease;
+            }
+
+            /* Focus state */
+            input:focus,
+            select:focus {
+                outline: none;
+                border-color: #4f8cff;
+                box-shadow: 0 0 0 2px rgba(79,140,255,0.15);
+            }
+
+            #echo-form input[type="checkbox"] {
+                margin-right: 0.4rem;
+            }
+
+            /* Submit button */
+            input[type="submit"] {
+                background: rgb(98, 0, 255);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                padding: 0.5rem;
+                transition: background 0.15s ease;
+                font-size: 0.9rem;
+            }
+
+            input[type="submit"]:hover {
+                background: rgb(153, 90, 255);
+            }
+
+            /* Results section */
+            #results {
+                margin-top: 1.25rem;
+                padding: 0.9rem;
+                border-radius: 6px;
+                background: #f9fafb;
+                font-family: monospace;
+            }
+
+            /* Noscript details styling */
+            noscript details {
+                margin-top: 0.75rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 6px;
+                padding: 0.6rem;
+                background: #fafafa;
+            }
+
+            noscript summary {
+                cursor: pointer;
+                font-weight: 500;
+            }
+
+            #book-cover {
+                display: block;
+                width: 430px;
+                height: 680px;
+                margin: auto;
+                z-index: 0;
+                transform: scale(0.9) rotateX(10deg) rotateY(-30deg) rotateZ(0.2deg) translateX(-15px);
+            }
+
+            .cover-back, .pages, .cover {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                border-radius: 0 6px 6px 0;
+                box-shadow: 1px 0px 1px rgba(0,0,0,0.9);
+                position: absolute;
+            }
+
+            .cover-back {
+                width: 108.7%;
+                top: 0.4%;
+                left: -4.93%;      
+                background: #f1f1ef;
+            }
+
+            .pages {
+                width: 103.4%;
+                height: 96%;
+                top: 1.35%;
+                left: -0.3%;
+                background: #e0ddd7 linear-gradient(to bottom, transparent 2px, #999 2px, transparent 4px);
+                
+                span {
+                    content: "";
+                    display: block;
+                    width: 103.8%;
+                    height: 100%;
+                    top: 1px;
+                    left: -3.4%;
+                    position: absolute;
+                    background: #e0ddd7;
+                    box-shadow: 1px 0px 1px rgba(0,0,0,0.9);
+                
+                    &:nth-child(2) {
+                        top: 4px;
+                        width: 104.6%;
+                    }
+                    
+                    &:nth-child(3) {
+                        top: 6px;
+                        width: 105%;
+                    }
+                    
+                    &:nth-child(4) {
+                        top: 8px;
+                        width: 105.6%;
+                    }
+                    
+                    &:nth-child(5) {
+                        top: 10px;
+                        width: 106.2%;
+                    }
+                }
+            }
+
+            .cover {
+                top: 3%;
+                left: 0.8%;
+                width: 109%;
+                background: #d1d5db;
+            
+                h1 {
+                    color: white;
+                    position: absolute;
+                    top: 8%;
+                    left: 16%;
+                    width: 62%;
+                    font-size: 6rem;
+                    font-family: sans-serif;
+                    text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+                    text-align: left;
+                }
+            }
+
+            .spine {
+                display: block;
+                height: 100%;
+                width: 10%;
+                background: #000;
+                position: absolute;
+                top: 1.9%;
+                left: -6.6%;
+                transform-style: preserve-3d;
+                transform: rotateX(0deg) rotateY(50deg) rotateZ(0deg) skew(0.19deg, 22deg);
+            
+                p {
+                    background: none;
+                    color: white;
+                    position: absolute;
+                    bottom: 15%;
+                    left: -120%;
+                    width: 400%;
+                    height: 5%;
+                    transform: rotate(-90deg);
+                    font-size: 16px;
+                    font-family: sans-serif;
+                    text-align: left;
+                }
+            }
+
+            .spine-shadow {
+                display: block;
+                background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+                width: 1.6%;
+                height: 100%;
+                position: absolute;
+                top: 3%;
+                left: 3.8%;
+            }
+            .cover-back {
+                z-index: -1;
+            }
+            .pages {
+                z-index: 0;
+            }
+            .cover {
+                z-index: 1; 
+            }
+            .spine {
+                z-index: 2;  
+            }
+            .spine-shadow {
+                z-index: 3; 
             }
         </style>
         <script src="./index.js" defer></script>
@@ -183,8 +422,7 @@
                             </ul>
                         </section>
                     </div>
-                    <article>
-                        <p style="text-align: center">* fill out the form below for a better echo demo</p>
+                    <article class="form-section">
                         <h4>Test Scripting Languages</h4>
                         <form id="echo-form">
                             <label for="scripting-lang">Choose a Scripting Language.</label>
@@ -202,7 +440,7 @@
                             </select>
                             <input type="hidden" name="_method" id="override" />
                             <label for="json">Optionally, enable JSON encoding.
-                                <input type="checkbox" name="json" id="json"> Encode with JSON.
+                                <div><input type="checkbox" name="json" id="json"> Encode with JSON.</div>
                             </label>
                             <label>Name.
                                 <input name="name" autocomplete="on" type="text" required/>
@@ -261,7 +499,47 @@
                 </section>
                 <section class="homework">
                     <h3>Analytics App</h3>
-                    <p>TBD</p>
+                    <a href="/report.html">View Page Analytics</a>
+                    <p> Feel free to do more interacting with the page below.</p>
+                    <div>
+                        <article class="form-section">
+                            <h4>Reading Preferences</h4>
+                            <form id="book-form">
+                                <label for="genre">What genres do you like to read?</label>
+                                <select id="genre" name="genre" multiple>
+                                    <option value="fantasy">Fantasy</option>
+                                    <option value="nonfiction">Nonfiction</option>
+                                    <option value="scifi">Science Fiction</option>
+                                    <option value="mystery">Mystery/Thriller</option>
+                                    <option value="romance">Romance</option>
+                                    <option value="historical">Historical</option>
+                                </select>
+                                <label> What's your favorite book?
+                                    <input name="book" autocomplete="on" type="text" maxlength="50" minlength="3" required/>
+                                </label>
+                                <input type="submit" value="Submit"/>
+                            </form>
+                            <noscript>
+                            </noscript>
+                        </article>
+                        <article id="book-cover">
+                            <div class="cover-back"></div>
+                            <div class="pages">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="cover">
+                                <h1 id="booktitle">Your Favorite Book</h1>
+                            </div>
+                            <div class="spine">
+                                <p id="genres">Your reading genres: </p>
+                            </div>
+                            <div class="spine-shadow"></div>
+                        </article>
+                    </div>
                 </section>
             </section>
             <section id="author-section">
