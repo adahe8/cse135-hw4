@@ -55,7 +55,7 @@ function getFormData(form){
 }
 
 const bookform = document.getElementById('book-form');
-echoform.addEventListener('submit', echoData);
+bookform.addEventListener('submit', echoData);
 const cover = document.getElementById('cover');
 const title = document.getElementById('booktitle');
 const genres = document.getElementById('genres');
