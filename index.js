@@ -17,11 +17,6 @@ function sendRequest(event){
     document.getElementById('override').value = selectedMethod;
     const data = getFormData(echoform);
 
-    // Create user identification for LogRocket
-    LogRocket.identify(echoform.name || 'ANONYMOUS_USER', {
-        name: echoform.name || 'Anonymous',
-    });
-
     // simple analytics custom event for each form's submit button clicks
     sa_event('request_submission');
     
@@ -64,7 +59,7 @@ function getFormData(form){
 
 const bookform = document.getElementById('book-form');
 echoform.addEventListener('submit', echoData);
-const cover = document.getElementByAttribute('.cover');
+const cover = document.getElementById('cover');
 const title = document.getElementById('booktitle');
 const genres = document.getElementById('genres');
 
