@@ -16,9 +16,6 @@ function sendRequest(event){
     let selectedMethod = document.getElementById('http-method').value;
     document.getElementById('override').value = selectedMethod;
     const data = getFormData(echoform);
-
-    // simple analytics custom event for each form's submit button clicks
-    sa_event('request_submission');
     
     const action = endpoints[selectedLang];
     if (!action) throw new Error('Invalid language selected! Please stick to the original dropdown options.');
