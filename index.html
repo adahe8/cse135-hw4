@@ -212,7 +212,7 @@
                 transform: scale(0.9) rotateX(10deg) rotateY(-30deg) rotateZ(0.2deg) translateX(-15px);
             }
 
-            .cover-back, .pages, .cover {
+            .cover-back, .pages, #cover {
                 display: flex;
                 width: 100%;
                 height: 100%;
@@ -268,7 +268,7 @@
                 }
             }
 
-            .cover {
+            #cover {
                 top: 3%;
                 left: 0.8%;
                 width: 109%;
@@ -328,7 +328,7 @@
             .pages {
                 z-index: 0;
             }
-            .cover {
+            #cover {
                 z-index: 1; 
             }
             .spine {
@@ -524,10 +524,10 @@
                             <div id="cover">
                                 <h1 id="booktitle">Your Favorite Book</h1>
                             </div>
-                            <div id="spine">
+                            <div class="spine">
                                 <p id="genres">Your reading genres: </p>
                             </div>
-                            <div id="spine-shadow"></div>
+                            <div class="spine-shadow"></div>
                         </article>
                     </div>
                 </section>
