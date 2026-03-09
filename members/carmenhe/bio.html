@@ -36,16 +36,14 @@
                 width: 100%;
             }
         </style>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKXPXHQ6FZ"></script>
+        <script src="../../collector.js" defer></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-JKXPXHQ6FZ');
+            window.addEventListener("DOMContentLoaded", () => {
+                collector.init({
+                    endpoint: "https://reporting.literallycreates.site/collect"
+                });
+            });
         </script>
-        <script src="https://cdn.logr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
-        <script>window.LogRocket && window.LogRocket.init('ukfmeg/literallycreatessite');</script>
     </head>
     <body>
          <header>

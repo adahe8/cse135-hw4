@@ -16,17 +16,14 @@
         min-height: 100vh;
       }
     </style>
-    <!-- I will add script to make the project-cards clickable -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKXPXHQ6FZ"></script>
+    <script src="../../collector.js" defer></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-JKXPXHQ6FZ');
+        window.addEventListener("DOMContentLoaded", () => {
+            collector.init({
+                endpoint: "https://reporting.literallycreates.site/collect"
+            });
+        });
     </script>
-    <script src="https://cdn.logr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
-    <script>window.LogRocket && window.LogRocket.init('ukfmeg/literallycreatessite');</script>
   </head>
   <body>
     <header>
@@ -107,7 +104,5 @@
     <script src="scripts/index.js"></script>
     <script src="components/projectCard.js"></script>
     <script type="module" src="scripts/loadProjects.js"></script>
-    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <script async data-collect="outbound,downloads" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
   </body>
 </html>

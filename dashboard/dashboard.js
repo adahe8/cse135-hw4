@@ -18,6 +18,15 @@
         }
     }
 
+    async function init() {
+        if (await checkAuth()) {
+            document.body.style.visibility = 'visible';
+            window.addEventListener('hashchange', route);
+            route();
+        }
+        // if not authed, checkAuth() already redirected — body stays hidden
+    }
+
     // Fetch helper
     async function api(endpoint) {
         const dates = getDateRange();

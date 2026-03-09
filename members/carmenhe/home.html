@@ -90,16 +90,14 @@
         <script>
             console.log("Hello fellow developer! Curious about my site, aren't ya? Find the full code here: https://github.com/thecarmechanic/cse134-hw3.");
         </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKXPXHQ6FZ"></script>
+        <script src="../../collector.js" defer></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-JKXPXHQ6FZ');
+            window.addEventListener("DOMContentLoaded", () => {
+                collector.init({
+                    endpoint: "https://reporting.literallycreates.site/collect"
+                });
+            });
         </script>
-        <script src="https://cdn.logr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
-        <script>window.LogRocket && window.LogRocket.init('ukfmeg/literallycreatessite');</script>
     </head>
     <body>
         <header>
@@ -225,8 +223,5 @@
             </nav>
         </footer>
         <script src="js/schemes.js"></script>
-        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-        <script async data-collect="outbound,downloads" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
     </body>
 </html>

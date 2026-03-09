@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 Not Found</title>
+    <script src="../../collector.js" defer></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            collector.init({
+                endpoint: "https://reporting.literallycreates.site/collect"
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Sorry, readers.</h1>
