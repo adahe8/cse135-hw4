@@ -163,7 +163,7 @@
                 const data = await res.json();
 
                 if (res.ok && data.success) {
-                    window.location.href = '/dashboard.html';
+                    window.location.href = '/dashboard/dashboard.html';
                 } else {
                     errorDiv.textContent = data.error || 'Invalid email or password.';
                     errorDiv.hidden = false;
