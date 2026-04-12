@@ -11,4 +11,11 @@ Password: grading!
 ### Domain
 Visit [https://reporting.literallycreates.site/]
 
-### 
+### Part 1: Login/ Logout
+Go to [https://reporting.literallycreates.site/login], or click "View Analytics App" on the main homework site via the link above.  
+Username: admin@example.com  
+Password: secret123  
+
+### Part 2: Check out the Tables
+
+### Part 3: Charts & Graphs w/ Zingcharts

@@ -2,7 +2,7 @@
 <!--Homepage-->
 <html lang="en">
     <head>
-        <title>CSE135 Homework Center</title>
+        <title>Fullstack Learning Center</title>
         <style>
             html, body{
                 height: 100%;
@@ -45,7 +45,7 @@
                 align-items: center;
                 width: 100%;
             }
-            #assignments {
+            #practice {
                 width: 75%;
             }
             #author-section {
@@ -60,14 +60,14 @@
             #author-section ul {
                 margin: 0;
             }
-            .homework {
+            .learning-stage {
                 border: 1px solid black;
                 margin: 0.25em 0;
             }
-            .homework h3 {
+            .learning-stage h3 {
                 margin: 0.25em 0;
             }
-            .homework p {
+            .learning-stage p {
                 font-size: 0.9em;
                 background-color: #f0f0f0;
             }
@@ -100,7 +100,18 @@
 
             }
 
-            .homework div{
+            .button-link{
+                background: rgb(98, 0, 255);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                padding: 0.5rem;
+                transition: background 0.15s ease;
+                font-size: 0.9rem;
+            }
+
+            .learning-stage div{
                 display: flex;
                 flex-direction: row;
             }
@@ -354,21 +365,24 @@
             <section id="branding">
                 <img src="./book-icon.svg" alt="open book icon">
                 <h1>Literally Websites</h1>
-                <p>Performant, accessibility-forward, community-centered web design and development.</p>
+                <p> An interactive testing page for our custom analytics app. Try filling out the various 
+                    forms present and checking out our bio pages linked here. Then, when you're ready, go view the analytics! </p>
+                <p> You have to log in to view the analytics app.<br><bold>Sample login username: admin@example.com.</bold><br><bold>Password: secret123</bold></p>
             </section>
+            <a href="/login.html" class="button-link">View Analytics</button>
         </header>
         <main>
-            <section id="assignments">
-                <h2>CSE135 Homework</h2>
+            <section id="practice">
+                <h2>Server-Side Scripting</h2>
                 <hr>
-                <section class="homework">
-                    <h3>Homework 1</h3>
+                <section class="learning-stage">
+                    <h3>PHP Intro</h3>
                     <ul>
                         <li><a href="./hello.php">hello.php</a></li>
                     </ul>
                 </section>
-                <section class="homework">
-                    <h3>Homework 2</h3>
+                <section class="learning-stage">
+                    <h3>Scripting Languages</h3>
                     <div id="script_links">
                         <section id="perl">
                             <h4>Perl</h4>
@@ -495,9 +509,8 @@
                         </noscript>
                     </article>
                 </section>
-                <section class="homework">
-                    <h3>Analytics App</h3>
-                    <a href="/login.html">View Page Analytics</a>
+                <section class="learning-stage">
+                    <h3>Bookish Form</h3>
                     <p> Feel free to do more interacting with the page below.</p>
                     <div>
                         <article class="form-section">
@@ -517,8 +530,7 @@
                                 </label>
                                 <input type="submit" value="Submit"/>
                             </form>
-                            <noscript>
-                            </noscript>
+                            <a href="/login.html" class="button-link">View Page Analytics</a>
                         </article>
                         <article id="book-cover">
                             <div class="cover-back"></div>
