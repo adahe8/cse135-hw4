@@ -4,109 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - Analytics Dashboard</title>
+    <link rel="icon" href="/book-icon.svg" type="image/svg+xml">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f0f2f5;
+            background: #020617;
+            color: #e2e8f0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         .login-card {
-            background: white;
+            background: #0f172a;
+            border: 1px solid #1e293b;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
             padding: 40px;
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
             margin: 20px;
-        }
-        .login-card h1 {
-            font-size: 1.5em;
-            color: #333;
-            text-align: center;
-            margin-bottom: 8px;
-        }
-        .login-card .subtitle {
-            text-align: center;
-            color: #888;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-size: 0.85em;
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 6px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
-            font-size: 1em;
-            font-family: inherit;
-            transition: border-color 0.2s;
-        }
-        .form-group input:focus {
-            outline: none;
-            border-color: #2E86C1;
-            box-shadow: 0 0 0 3px rgba(46,134,193,0.15);
-        }
-        .error {
-            background: #fdf0f0;
-            color: #c0392b;
-            border: 1px solid #e6b0aa;
-            border-radius: 4px;
-            padding: 10px 12px;
-            font-size: 0.9em;
-            margin-bottom: 20px;
-        }
-        button[type="submit"] {
-            width: 100%;
-            padding: 12px;
-            background: #2E86C1;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        button[type="submit"]:hover {
-            background: #2471a3;
-        }
-        button[type="submit"]:active {
-            background: #1f618d;
-        }
-        button[type="submit"]:disabled {
-            background: #85c1e9;
-            cursor: not-allowed;
-        }
-        .brand-bar {
-            width: 100%;
-            height: 4px;
-            background: #2E86C1;
-            border-radius: 8px 8px 0 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .login-card {
             position: relative;
             overflow: hidden;
         }
+
+        .brand-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #38bdf8;
+        }
+
+        .login-card h1 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #475569;
+            font-size: 0.8rem;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px 10px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            color: #e2e8f0;
+            font-size: 0.875rem;
+            font-family: inherit;
+            transition: border-color 0.15s;
+        }
+
+        .form-group input::placeholder { color: #334155; }
+        .form-group input:focus { outline: none; border-color: #38bdf8; }
+
+        .error {
+            background: rgba(248, 113, 113, 0.08);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, 0.25);
+            border-radius: 4px;
+            padding: 10px 12px;
+            font-size: 0.8rem;
+            margin-bottom: 18px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 9px;
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background 0.15s;
+            margin-top: 4px;
+        }
+
+        button[type="submit"]:hover:not(:disabled) { background: #7dd3fc; }
+        button[type="submit"]:disabled { opacity: 0.45; cursor: not-allowed; }
     </style>
 </head>
 <body>
