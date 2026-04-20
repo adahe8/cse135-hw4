@@ -1,5 +1,5 @@
 # Analytics App
-Email [cah010@ucsd.edu] and [adhe@ucsd.edu] with your feedback, questions, or any advice for this project and Web Dev in general.
+Email [carmen.he0908@gmail.com] and [ada.he0908@gmail.com] with your feedback, questions, or any advice for this project and Web Dev in general.
 ## Creators
 Ada He  
 Carmen He
